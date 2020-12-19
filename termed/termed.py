@@ -13,7 +13,7 @@ fast = inhale 3 hold 3 exhale 3 hold 3
 1 set = 4 breaths = 1:04 min
 2 set = 8 breaths = 2.08 min
 '''
-cycle = ["inhale", "hold", "exhale", "hold"]
+cycle = ["inhale", "exhale"]
 durration = lambda x: 64*x
 count = 0
 cycle_set = 1
@@ -22,6 +22,6 @@ while count != durration(1):
         print(f"set {cycle_set}")
         cycle_set += 1
     for item in cycle:
-        for i in tqdm(range(0,4), desc = item):
-            sleep(1)
+        for i in tqdm(range(0,1), desc = item):
+            sleep(.1)
             count += 1
